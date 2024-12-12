@@ -1,6 +1,5 @@
-/*O css para a Home Page*/
-/* Reseta estilos padrão */
-body, h1, h2, p, ul, li, a, img, video, iframe {
+/* Estilos padrão e reset */
+body, h1, h2, p, ul, li, a, img {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,8 +7,9 @@ body, h1, h2, p, ul, li, a, img, video, iframe {
 
 /* Corpo e cores */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
+    color: #333;
 }
 
 /* Navbar */
@@ -19,12 +19,12 @@ body {
     align-items: center;
     background: black;
     color: white;
-    padding: 10px 20px;
+    padding: 30px 20px;
 }
 
 .navbar .logo {
-    font-size: 24px;
-    font-weight: bold;
+    height: 30px;
+    display: flex;
 }
 
 .nav-links {
@@ -53,55 +53,208 @@ body {
 
 .slides {
     display: flex;
-    animation: slide 10s infinite;
+    animation: slide 15s infinite;
 }
 
-.slides img {
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
     width: 100%;
     height: 100vh;
     object-fit: cover;
 }
 
+.slide-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.slide-info h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.slide-info .btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: red;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.slide-info .btn:hover {
+    background: darkred;
+}
+
+/* Animação do carrossel */
 @keyframes slide {
     0%, 33% { transform: translateX(0); }
     34%, 66% { transform: translateX(-100%); }
     67%, 100% { transform: translateX(-200%); }
 }
 
-/* Seção de Modelos */
-#models {
-    padding: 20px;
-    text-align: center;
+/* Seção de Notícias */
+#news {
+    padding: 40px;
     background: #f4f4f4;
+    text-align: center;
 }
 
-.grid {
+#news h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.news-grid {
     display: flex;
-    gap: 20px;
-    justify-content: center;
+    gap: 30px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
 }
 
-.card {
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 5px;
+.news-card {
     background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 1;
+    max-width: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
 
-.card:hover {
+.news-card:hover {
     transform: scale(1.05);
 }
 
-.card img {
+.news-card img {
     width: 100%;
-    border-radius: 5px;
+    height: 350px;
+    object-fit: cover;
 }
+
+.news-card h3 {
+    font-size: 22px;
+    margin: 15px;
+    font-weight: bold;
+}
+
+.news-card p {
+    font-size: 16px;
+    margin: 15px;
+    color: #555;
+}
+
+/* Seção de Notícias 2 */
+#horizontal-news {
+    padding: 40px;
+    background: #ffffff;
+}
+
+#horizontal-news h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.horizontal-card {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.horizontal-card:hover {
+    transform: scale(1.02);
+}
+
+.horizontal-card img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.horizontal-card-content {
+    flex: 1;
+}
+
+.horizontal-card-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.horizontal-card-content p {
+    font-size: 16px;
+    color: #555;
+}
+
+
 
 /* Rodapé */
 footer {
-    background: black;
-    color: white;
-    text-align: center;
-    padding: 10px;
+    background: #111;
+    color: #ddd;
+    padding: 20px 0;
+    font-size: 14px;
+    border-top: 3px solid red;
+}
+
+footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center;    /* Centraliza os itens verticalmente */
+    text-align: center;     /* Centraliza o texto */
+    gap: 20px;              /* Espaço entre os itens */
+}
+
+footer .footer-content div {
+    flex: 1 1 auto; /* Flexível, mas mantém proporção uniforme */
+    max-width: 300px; /* Limita o tamanho de cada seção */
+}
+
+footer .footer-content a {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer .footer-content a:hover {
+    text-decoration: underline;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones */
+    gap: 15px;              /* Espaço entre os ícones */
+}
+
+footer .social-icons a img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+footer .social-icons a img:hover {
+    transform: scale(1.2);
 }
