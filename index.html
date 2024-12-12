@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ducati - Desempenho e Estilo</title>
-    <link rel="icon" type="image/png" href="img/Color-Ducati-Logo.png">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="logo">Ducati</div>
+        <div class="logo"><img src="img/Ducati-Emblems.png" alt="Ducati"></div>
         <ul class="nav-links">
             <li><a href="#models">Modelos</a></li>
-            <li><a href="#about">Sobre Nós</a></li>
+            <li><a href="#news">Notícias</a></li>
             <li><a href="#contact">Contato</a></li>
         </ul>
     </nav>
@@ -21,35 +21,100 @@
     <!-- Carrossel -->
     <section class="carousel">
         <div class="slides">
-            <img src="img/Panigale-V4-7G-MY25-Model-Preview-1050x650_v02.png" alt="Ducati Panigale V4">
-            <img src="img/sfv4.png" alt="Ducati Streetfighter V4">
-            <img src="img/SPIN_DIAVEL_V4_RED.png" alt="Ducati Diavel V4">
+            <!-- Slide 1 -->
+            <div class="slide">
+                <img src="img/Panigale-V4-7G-MY25-Model-Preview-1050x650_v02.png" alt="Ducati Panigale V4">
+                <div class="slide-info">
+                    <h2>Ducati Panigale V4</h2>
+                    <p>A perfeita combinação de potência e design.</p>
+                    <a href="https://www.ducati.com/ww/en/bikes/panigale/panigale-v4" target="_blank" class="btn">Saiba Mais</a>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="img/sfv4.png" alt="Ducati Streetfighter V4">
+                <div class="slide-info">
+                    <h2>Ducati Streetfighter V4</h2>
+                    <p>A potência de uma superbike em um design naked.</p>
+                    <a href="https://www.ducati.com/ww/en/bikes/streetfighter/streetfighter-v4" target="_blank" class="btn">Saiba Mais</a>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="img/SPIN_DIAVEL_V4_RED.png" alt="Ducati Diavel V4">
+                <div class="slide-info">
+                    <h2>Ducati Multistrada V4</h2>
+                    <p>Versatilidade para todas as estradas e aventuras.</p>
+                    <a href="https://www.ducati.com/ww/en/bikes/multistrada/multistrada-v4" target="_blank" class="btn">Saiba Mais</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Modelos -->
-    <section id="models">
-        <h2>Nossos Modelos</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="https://www.ducati.com/mediaImage/_l_X_1600_900/HYPERSC/img/hypermotard-950-sp_over.jpg" alt="Hypermotard">
-                <h3>Hypermotard</h3>
+    <!-- Notícias (primeira seção - grid) -->
+    <section id="news">
+        <h2>Últimas Notícias</h2>
+        <div class="news-grid">
+            <article class="news-card">
+                <img src="img/jack-miller-ducati-team-1.jpg" alt="Nova Temporada MotoGP">
+                <h3>Nova Temporada MotoGP</h3>
+                <p>A Ducati está pronta para a nova temporada do MotoGP, liderada por pilotos de elite.</p>
+            </article>
+            <article class="news-card">
+                <img src="img/Panigale-V4-7G-MY25-Model-Preview-1050x650_v02.png" alt="Lançamento Panigale V4">
+                <h3>Lançamento da Nova Panigale V4</h3>
+                <p>Apresentando o mais novo modelo Panigale V4, com tecnologia de ponta.</p>
+            </article>
+            <article class="news-card">
+                <img src="img/SPIN_DIAVEL_V4_RED.png" alt="Multistrada V4">
+                <h3>Diavel V4 em Ação</h3>
+                <p>Explore as novas capacidades de longa distância com a Multistrada V4.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Notícias (segunda seção - horizontais) -->
+    <section id="horizontal-news">
+        <h2>Mais Notícias</h2>
+        <div class="horizontal-card">
+            <img src="img/Color-Ducati-Logo.png" alt="Inovação Ducati">
+            <div class="horizontal-card-content">
+                <h3>Ducati e Inovação</h3>
+                <p>Descubra como a Ducati está liderando inovações tecnológicas no mundo das motocicletas.</p>
             </div>
-            <div class="card">
-                <img src="https://www.ducati.com/mediaImage/_l_X_1600_900/PANIGALE/img/panigale-v4-s_over.jpg" alt="Panigale V4">
-                <h3>Panigale V4</h3>
+        </div>
+        <div class="horizontal-card">
+            <img src="img/Ducati-Emblems.png" alt="História Ducati">
+            <div class="horizontal-card-content">
+                <h3>A História da Ducati</h3>
+                <p>Uma viagem pela história icônica da Ducati, desde suas origens até os dias de hoje.</p>
             </div>
         </div>
     </section>
 
     <!-- Rodapé -->
     <footer>
-        <p>© 2024 Ducati. Todos os direitos reservados.</p>
-        <ul class="footer-links">
-            <li><a href="#">Privacidade</a></li>
-            <li><a href="#">Termos de Uso</a></li>
-        </ul>
-    </footer>
+        <div class="footer-content">
+            <div>
+                <p>&copy; 2024 Ducati. Todos os direitos reservados.</p>
+            </div>
+            <div>
+                <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+            </div>
+            <div class="social-icons">
+                <a href="https://facebook.com/ducati" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                </a>
+                <a href="https://twitter.com/ducati" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter">
+                </a>
+                <a href="https://instagram.com/ducati" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                </a>
+            </div>            
+        </div>
+    </footer>    
+
 
     <script src="script.js"></script>
 </body>
