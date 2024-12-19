@@ -9,4 +9,4 @@ Tiago Braga
 ## Link do Site
 https://nobody-cares-at-all.github.io/Repo_Proj_TI/
 <p>
-<img src="Repo_Proj_TI/img/QR-Code.png" alt="QR-Code">
+![alt text](img/QR-Code.png)
